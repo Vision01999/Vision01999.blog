@@ -5,10 +5,6 @@
   <!-- SEO相关 -->
   
     
-      
-        <meta name="robots" content="index,follow">
-      
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -20,7 +16,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>0000FF blog</title>
+  <title>hello - 0000FF blog</title>
   
 
   
@@ -72,7 +68,7 @@
   
   
   <div class="cover-wrapper">
-    <cover class='cover ' style="display: none;">
+    <cover class='cover post' style="display: none;">
       <div class='cover-body'>
   <div class='a'>
     
@@ -334,7 +330,7 @@
   </div>
   
 
-  <div class="l_body">
+  <div class="l_body nocover">
     <div class='body-wrapper' id="pjax-container">
       
         <!--此文件用来存放一些不方便取值的变量-->
@@ -343,9 +339,12 @@
 
 
 <div id="pjax-data" style="display: none">
-  <div id="pjax-ispage">false</div>
-  <div id="pjax-pageTitle"></div>
+  <div id="pjax-ispage">true</div>
+  <div id="pjax-pageTitle">hello</div>
   <div id="pjax-enable-cover">true</div>
+  
+  <div id="valine-path">none</div>
+  <div id="valine-placeholder">none</div>
   
   
 </div>
@@ -353,16 +352,16 @@
 
 <script>
   // 处理封面 此时 jquery 还没加载
-  if ("docs" == "none") { // 移除封面
+  if ("none" == "none") { // 移除封面
     document.getElementsByClassName('cover')[0].style.display = "none";
     document.getElementsByClassName('l_body')[0].classList.add("nocover");
     document.getElementsByClassName('l_header', 'cover-wrapper')[0].classList.add("show");
   } else {
-    if ("docs" == "blog") { // 半屏
+    if ("none" == "blog") { // 半屏
       document.getElementsByClassName('cover')[0].classList.remove("full");
       document.getElementsByClassName('cover')[0].classList.add("half");
       document.getElementsByClassName('scroll-down')[0].style.display = "none";
-    } else if ("docs" == "docs") { // 全屏
+    } else if ("none" == "docs") { // 全屏
       document.getElementsByClassName('cover')[0].classList.remove("half");
       document.getElementsByClassName('cover')[0].classList.add("full");
       document.getElementsByClassName('scroll-down')[0].style.display = "";
@@ -378,25 +377,10 @@
 
 <div class='l_main'>
   
-  <section class="post-list ">
-    
-      
-        
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box floatable reveal ">
+
   
+    <article id="post" class="post white-box reveal floatable article-type-post" itemscope itemprop="blogPost">
+      
 
 
   <section class='meta'>
@@ -406,11 +390,11 @@
       <div class="meta" id="header-meta">
         
           
-  <h2 class="title">
+  <h1 class="title">
     <a href="/2020/07/26/hello/">
       hello
     </a>
-  </h2>
+  </h1>
 
 
         
@@ -449,42 +433,6 @@
 
             
           
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/2020/07/26/hello/" class="leancloud_visitors" data-flag-title="hello">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
-  
-  <a href="/2020/07/26/hello/#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/2020/07/26/hello/">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
-
-            
-          
-            
-              
-
-            
-          
         </div>
         
           <hr>
@@ -494,351 +442,118 @@
   </section>
 
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box floatable reveal ">
-  
-
-
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
           
-  <h2 class="title">
-    <a href="/2020/07/26/The-Beginning/">
-      the beginning
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
           
-            
           
-            
+          
+            <div class='article_footer'>
               
-<div class='new-meta-item author'>
-  <a href="https://studynow.Today" target="_blank" rel="nofollow noopener">
-    <img no-lazy src="https://cdn.jsdelivr.net/gh/Vision01999/cdn@1.5/pictures/headpic.jpg">
-    <p>ZJH</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Jul 25, 2020</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/2020/07/26/The-Beginning/" class="leancloud_visitors" data-flag-title="the beginning">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
-  
-  <a href="/2020/07/26/The-Beginning/#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/2020/07/26/The-Beginning/">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
-
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="一个开始"><a href="#一个开始" class="headerlink" title="一个开始"></a>一个开始</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本来只是想着写公众号来理一下思路和记录一些奇思妙想，后来冒出自建blog的想法，于是捣鼓出了现在这个网站，当然看了一个星期的代码还是啥也不会，但也算入了坑吧，只能慢慢填了，嗯，至于为什么不去现成的blog网站注册，有一说一觉得没有格调<del>b格</del>，风格单一，浪漫不死！，其次觉得毕竟是学编程的怎么能轻易寄他人程序篱下呢，不能对不起那些天打出的<code>hello world</code>吧 。我不想blog被广告所充斥，也并不把它单单的当成是一个记录和分享的平台，目标是建立一个人的网上根据地，——领土主权···!</p>
-<hr>
-<h2 id="关于公众号"><a href="#关于公众号" class="headerlink" title="关于公众号"></a>关于公众号</h2><p>公众号也就写了一篇推文:hole:嗨，前几天想着推一篇的关于身边的政治正确etc.，以及当下社会问题的一些思考。但感觉思路不太好就没落实的去写，后面就慢慢被其他事情占用了大脑CPU，推文就被搁置了，但是第一篇的推文小伙伴们的反馈都很<del>热烈</del>nice，给了我写推文很大的动力:slightly_smiling_face:，无奈想法太多，动力被分散了。后面尽量我会在暑期多发几篇，十分感谢帮我分享和留言的小伙伴:-),</p>
-<h2 id="这个网站"><a href="#这个网站" class="headerlink" title="这个网站"></a>这个网站</h2><p>emm，这个<a href="https://studynow.today/" target="_blank" rel="noopener" title="studynow.today">Blog</a>建立是为了更好整理和记录自己的知识系统，也如上面所说是为了建立自己的根据地，本身我是想着往前端方向发展的，太喜欢那些好看的页面设计了，以及有趣的交互，但是最终都是要往全栈发展？？，可我并不想秃头:cry:,淦，希望不会吧​。</p>
-<p>目前网站只是一个框架和雏形，<del>啥也不是</del>，但未来我会不断更新并且加入更多有趣的东西，感兴趣的小伙伴可以mark一下网址<code>https://studynow.today/</code>，你可以把你看见有意思的设计交互分享给我，你也成为了这个网站的设计者哦<br></p>
-<br>
-
-<p>比较喜欢的一句话</p>
-<br>
-
-<blockquote>
-<p>山不让尘乃成其高，海不辞盈方有其阔  ——老子</p>
-</blockquote>
-<p><br>始于现在，展于未来</p>
-<img src="https://cdn.jsdelivr.net/gh/Vision01999/cdn/pictures/future.jpg" alt="未来" style="zoom: 14%;" />
-
-<p>来都来了，留个言​​，听听歌:artificial_satellite:</p>
-
-      
-    </div>
-    
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box floatable reveal ">
-  
-
-
-  <section class='meta'>
-    
-      
-      
-      <div class="meta" id="header-meta">
-        
-          
-  <h2 class="title">
-    <a href="/2020/07/24/this-is-my-world/">
-       this is my world
-    </a>
-  </h2>
-
-
-        
-        <div class='new-meta-box'>
-          
-            
-          
-            
-              
-<div class='new-meta-item author'>
-  <a href="https://studynow.Today" target="_blank" rel="nofollow noopener">
-    <img no-lazy src="https://cdn.jsdelivr.net/gh/Vision01999/cdn@1.5/pictures/headpic.jpg">
-    <p>ZJH</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-
-            
-          
-            
-              <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Jul 23, 2020</p>
-  </a>
-</div>
-
-            
-          
-            
-              
-
-            
-          
-            
-              
-  <div class="new-meta-item browse valine">
-    <a class='notlink'>
-      <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
-      
-      <span id="/2020/07/24/this-is-my-world/" class="leancloud_visitors" data-flag-title=" this is my world">
-      <p>
-        <span class="leancloud-visitors-count"></span>
-      </p>
-      </span>
-    </a>
-  </div>
-
-
-            
-          
-            
-              
-<div class="new-meta-item comments-count">
-  
-  <a href="/2020/07/24/this-is-my-world/#comments">
-    <i class="fas fa-comment-dots fa-fw"></i>
-    <span class="valine-comment-count" data-xid="/2020/07/24/this-is-my-world/">0</span>
-    <span class="leancloud-comments-count">&nbsp;</span>
-  </a>
-</div>
-
-
-            
-          
-            
-              
-
-            
-          
-        </div>
-        
-          <hr>
-        
-      </div>
-    
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    
-      
-    
-  </section>
-</article>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-    
-    
-
-  
-
-
-</div>
-<aside class='l_side'>
-  
+                
   
     
     
 
-<section class="widget blogger floatable desktop mobile">
-  <div class='content'>
+<section class="widget qrcode  desktop mobile">
+  
+
+  <div class='content article-entry'>
     
       
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/Vision01999/cdn@1.5/pictures/headpic.jpg'/>
-        </a>
+        <div class='fancybox'><img src='https://cdn.jsdelivr.net/gh/Vision01999/cdn@1.0/pictures/qrcode.jpg'
+        
+          height='77px'
+        ></div>
       
-    
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="https://music.163.com/#/user/home?id=137492537"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
-          
-        
-          
-            <a href="https://github.com/Vision01999"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
-          
-        
-      </div>
     
   </div>
 </section>
 
   
 
-  
-    
-    
 
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud floatable desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
+              
+            </div>
+          
+        </div>
+        
+          
 
 
-    <div class='content'>
-      <a href="/tags/web/" style="font-size: 14px; color: #999">web</a>
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-25T23:13:01+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Jul 25, 2020</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
     </div>
   </section>
 
 
+        
+        
+          <div class="prev-next">
+            
+            
+              <a class='next' href='/2020/07/26/The-Beginning/'>
+                <p class='title'>the beginning<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>一个开始前言本来只是想着写公众号来理一下思路和记录一些奇思妙想，后来冒出自建blog的想法，于是捣鼓出了现在这个网站，当然看了一个星期的代码还是啥也不会，但也算入了坑吧，只能慢慢填了，嗯，至于为...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
   
+
+  
+    
+  <article class="post white-box reveal comments floatable">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+      <section id="comments">
+        <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+      </section>
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+</div>
+<aside class='l_side'>
+  
+  
+
+  
+    
+    
+
+
+
 
   
 
